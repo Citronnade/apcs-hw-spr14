@@ -1,0 +1,22 @@
+
+import info.gridworld.actor.Bug;
+
+public class DancingBug extends Bug
+{
+    private int[] moves;
+    
+    public DancingBug(int[] moves)
+    {
+	this.moves = moves;
+    }
+    public DancingBug(){
+	this({5, 6, 1, 2});
+    }
+
+    
+    public void act()
+    {
+	
+	
+    }
+}

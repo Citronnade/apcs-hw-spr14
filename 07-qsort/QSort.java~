@@ -1,0 +1,14 @@
+import java.util.*;
+
+public class QSort{
+    public static void QSort(int[] L){
+	if (L.length <=1){
+	    return L;
+	}
+	else{
+	    int pivot = 
+	   
+	}
+
+    }
+}
