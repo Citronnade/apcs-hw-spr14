@@ -38,14 +38,48 @@ public class QSort{
 
     }
 
+    public static int partition(int[] a, int L, int R){
+	int wall = 0;
+	int temp = 0;
+	Random r = new Random();
+	int pivot =  r.nextInt(a.length);
+	temp = a[pivot];
+	a[pivot] = a[a.length-1];
+	a[a.length-1] = temp;
+	for (int i = 0; i < a.length-1; i++){
+	    if (a[i] < a[a.length-1]){ //since pivot's over here now
+		temp = a[wall];
+		a[wall] = a[i];
+		a[i] = temp;
+		wall++;
+	    }
+	}
+	temp = a[wall];
+	a[wall] = a[a.length-1];
+	a[a.length-1] = temp;
+	return pivot;
+    }
+
     public static void main (String args[]){
 	Random r = new Random();
 	ArrayList tests = new ArrayList();
 	for(int i = 0; i < 20; i++){
 	    tests.add(r.nextInt(100));
 	}
-	System.out.println(tests);
+	int[] tests2 = new int[20];
+	for(int i = 0; i < 20; i++){
+	    tests2[i] = r.nextInt(100);
+	}
+	//System.out.println(tests);
+	//System.out.println();
+	//System.out.println(QSort(tests));
+	for(int i = 0; i < 20; i++){
+	    System.out.print(tests2[i] + ", ");
+	}
 	System.out.println();
-	System.out.println(QSort(tests));
+	System.out.println(partition(tests2,0, tests2.length));
+	for(int i = 0; i < 20; i++){
+	    System.out.print(tests2[i] + ", ");
+	}
     }
 }
