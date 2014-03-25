@@ -1,0 +1,24 @@
+public class MyLinkedList{
+    private Node head;
+
+    public myLinkedList(){
+	head = null;
+    }
+    public String toString(){
+	return "" + head;
+    }
+
+    public void add(String d){
+	Node tmp = new Node(d);
+	tmp.setNext(head);
+	head = tmp;
+    }
+
+
+    public static void main(String args[]){
+	MyLinkedList L = new LinkedList();
+	L.add("Sully");
+	System.out.println(L);
+	L.add("Mike);
+    }
+}
