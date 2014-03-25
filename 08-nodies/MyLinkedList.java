@@ -35,9 +35,17 @@ public class MyLinkedList{
     }
     
     public String remove(int i){
-     	Node temp = get(i+1);
-	get(i-1).setNext(temp);
-	return get(i).getData();
+	if (i == 0){ //removing first one
+	    Node prev = get(i);
+	    head = head.getNext();
+	    return prev.toString();
+	}
+	else{
+	    Node prev = get(i);
+	    Node temp = get(i+1);
+	    get(i-1).setNext(temp);
+	    return prev.getData();
+	}
     }
 
     /*
@@ -74,6 +82,8 @@ public class MyLinkedList{
 	System.out.println(L.set(3, "hihihihiihihi"));
 	System.out.println(L.get(3));
 	System.out.println();
+	System.out.println(L);
+	System.out.println(L.remove(1));
 	System.out.println(L);
 
 	//L.add(2, "Two");
