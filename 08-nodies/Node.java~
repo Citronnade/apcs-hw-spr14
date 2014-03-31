@@ -1,0 +1,32 @@
+public class Node{
+    private String data;
+    private Node next;
+
+    public Node(String d){
+	data = d;
+	next = null;   //slightly not needed
+    }
+    
+    public void setData(String d){
+	data = d;
+    }
+
+    public void getData(){
+	return data;
+    }
+
+    public Node getNext(){
+	return next;
+    }
+    
+    public String toString(){
+	return data;
+    }
+
+    public static void main(String[] args){
+	Node n1;
+	n1 = new Node("Sully");
+	System.out.println(n1);
+	Systemout.println(n1.getNext());
+    }
+}

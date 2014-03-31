@@ -1,0 +1,10 @@
+public class LinkedListIterator implements Iterator<E>{
+    private Node currentNode;
+   
+    public LinkedListIterator(Node n){
+	currentNode = n;
+	n = n.getNext();
+    }
+
+    
+}
