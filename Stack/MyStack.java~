@@ -1,0 +1,21 @@
+public class MyStack{
+
+    Node top;
+    // constructor 1
+    public MyStack(){
+	top = null;
+    }
+    //push 2
+
+    //pop
+
+    //peek
+
+    //isEmpty
+
+    //
+
+    public static void main(String[] args){
+	
+    }
+}
