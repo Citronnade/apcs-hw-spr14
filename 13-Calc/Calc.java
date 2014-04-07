@@ -10,7 +10,8 @@ public class Calc{
 
     private void checkElements(){
 	if (stack.getLength() < 2){
-	    int a = 2 / (1-1); //too lazy to do exceptions properly, but this will kill it.
+	    int[] a = new int[0]; //too lazy to do exceptions properly, but this will kill it.
+	    int b = a[24635748576435267] //arrayoob
 	}
     }
 
@@ -66,8 +67,11 @@ public class Calc{
 		}
 	    }
 	    
+	    catch(ArithmeticException e){
+		System.out.println("Division by zero."); //triggers either on arithmetic methods or parseInt failure
+	    }
 	    catch(Exception e){
-		System.out.println("Invalid argument"); //triggers either on arithmetic methods or parseInt failure
+		System.out.println("Invalid argument");
 	    }
 	    System.out.println(c.stack);
 	}
