@@ -1,0 +1,14 @@
+public class Calc{
+    private MyStack stack;
+    
+    public Calc(){
+	stack = new MyStack();
+    }
+
+    private int add(int a){
+	
+    }
+
+
+
+}
