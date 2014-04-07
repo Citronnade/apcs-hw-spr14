@@ -1,6 +1,8 @@
 import java.util.*;
 import java.io.*;
 
+//TURNS OUT DIVIDING BY ZERO DOESN'T THROW EXCEPTIONS
+
 public class Calc{
     public MyStack stack;
     
@@ -11,7 +13,7 @@ public class Calc{
     private void checkElements(){
 	if (stack.getLength() < 2){
 	    int[] a = new int[0]; //too lazy to do exceptions properly, but this will kill it.
-	    int b = a[24635748576435267] //arrayoob
+	    int b = a[2463567]; //arrayoob
 	}
     }
 
@@ -63,7 +65,7 @@ public class Calc{
 		    System.out.println(c.divide());
 		}
 		else{
-		    c.push(Integer.parseInt(s));
+		    c.push(Float.parseFloat(s));
 		}
 	    }
 	    
