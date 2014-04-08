@@ -37,6 +37,9 @@ public class Calc{
     } 
     
     private double divide(){
+	if (stack.peek() == 0){
+	    int a =  5 / 0; //throws exception
+	}
 	checkElements();
 	return stack.push((1/stack.pop()) * stack.pop());
     }
