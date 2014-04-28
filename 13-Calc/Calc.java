@@ -73,10 +73,10 @@ public class Calc{
 	    }
 	    
 	    catch(ArithmeticException e){
-		System.out.println("Division by zero."); //triggers either on arithmetic methods or parseInt failure
+		System.out.println("Division by zero."); 
 	    }
 	    catch(Exception e){
-		System.out.println("Invalid argument");
+		System.out.println("Invalid argument");  //triggers either on arithmetic methods or parseInt failure
 	    }
 	    System.out.println(c.stack);
 	}
