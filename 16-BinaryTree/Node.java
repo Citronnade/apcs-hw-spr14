@@ -33,12 +33,15 @@ public class Node{
 
     public Node getRight(){
 	return right;
+
     }
 
     public String toString(){
 	return data;
     }
-
+    public boolean isLeaf(){
+	return (right == null && left == null);
+    }
 }
 
 

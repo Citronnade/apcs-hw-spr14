@@ -1,0 +1,12 @@
+public class MyHeap{
+    private int[] values;
+    private int size;
+
+    public MyHeap(){
+	this(new int[10]);
+    }
+    
+    public MyHeap(int[] nums){
+	
+    }
+}

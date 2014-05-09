@@ -49,4 +49,19 @@ public class BinSearchTree{
 	}
 	return temp; //not sure which node to return
     }
+
+    public Node search2(Node c, int x){
+	if (c == null || c.getData() == x){ //pls short circuit ty
+	    return c;
+	}
+
+	else{
+	    if (c.getData() < x){ //need to move left
+		return search2(c.getLeft(), x);
+	    }
+	    else{
+		return search2(c.getRight(), x);
+	    }
+	}
+    }
 }
