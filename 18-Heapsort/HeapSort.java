@@ -3,8 +3,7 @@ import java.util.*;
 public class HeapSort{
     public static void sort(int[] nums){
 	MyHeap heap = new MyHeap(nums);
-	int[] temp = new int[heap.size()];
-	for (int i = 0; i < temp.length; i++){
+	for (int i = 0; i < heap.size(); i++){
 	    nums[i] = heap.removeMax();
 	}
     }

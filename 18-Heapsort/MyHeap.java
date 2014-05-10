@@ -43,7 +43,7 @@ public class MyHeap{
 
     public int removeMax(){ 
 	int loc = size;
-	int removed = values[1]; //the left/right side swapping might miss the actual maximum value
+	int removed = values[1];
 	swap(loc, 1); //root is at 1!!
 	values[loc] = Integer.MIN_VALUE;
 	size--; //this pretty much deletes the node
