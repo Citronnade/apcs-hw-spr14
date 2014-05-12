@@ -1,7 +1,7 @@
 public class MedianHeap{
-    private MinHeap minH;
-    private MaxHeap maxH;
-    private int size;
+    public MinHeap minH;
+    public MaxHeap maxH;
+    public int size;
 
     public MedianHeap(){
 	minH = new MinHeap();
@@ -12,16 +12,19 @@ public class MedianHeap{
     public void insert(int num){
 	if (num > maxH.getRoot()){
 	    minH.insert(num);
+	    // System.out.println("added " + num + " to min:" + minH);
+	    //System.out.println("min's size():" + minH.size());
 	}
 	else{
 	    maxH.insert(num);
+	    // System.out.println("added " + num + " to max:" + maxH);
 	}
 	size++;
 	balance();
     }
 
     public int remove(){ //gets median
-	if (size = 0){
+	if (size == 0){
 	    return 0; //in case icky stuff happens
 	}
 	if ((maxH.size() + minH.size()) % 2 == 0){ //even size
@@ -53,11 +56,14 @@ public class MedianHeap{
     public static void main (String[] args){
 	
 	MedianHeap heap = new MedianHeap();
-	for (int i = 0; i < 10; i++){
+	for (int i = 0; i < 9; i++){
 	    heap.insert(i);
+
 	}
-	for (int i = 0; i < 10; i++){
+	for (int i = 0; i < 9; i++){
 	    System.out.println(heap.remove());
+	    System.out.println("max:" + heap.maxH);
+	    System.out.println("min:" + heap.minH);
 	}
     }
 }

@@ -6,11 +6,20 @@ public class MinHeap{
     private int size;
     // [0,1,2,3,4,5,0,0,0]
     public MinHeap(){
-	this(new int[10]);
+	values = new int[10];
+	values[0] = Integer.MIN_VALUE;
+	for (int i = 1; i < values.length; i++){
+	    values[i] = Integer.MAX_VALUE;
+	}
+	size = 0;
     }
     
-    public void getRoot(){
+    public int getRoot(){
 	return values[1];
+    }
+
+    public String toString(){
+	return Arrays.toString(values);
     }
     
     public MinHeap(int[] nums){
@@ -29,7 +38,7 @@ public class MinHeap{
 	int temp = values[first];
 	values[first] = values[second];
 	values[second] = temp;	     
-	
+
     }
 
 
@@ -39,6 +48,7 @@ public class MinHeap{
 	    temp[i] = values[i];
 	}
 	values = temp;
+	System.out.println("grew");
     }
 
     private void shrink(){
@@ -62,11 +72,16 @@ public class MinHeap{
 	}
 	
 	int loc = size+1;
+	// System.out.println("size:" + size);
+	// System.out.println("loc:" + loc);
 	values[loc] = num;
 	while (values[loc/2] > values[loc]){ //can swap up
 	    swap(loc/2, loc); //swap!
 	    loc = loc/2; //move loc to new location
+	    // System.out.println("size before:" + size);
 	}	
+	size++;
+	// System.out.println("size after:" + size);
     }
 
     public int remove(){ 

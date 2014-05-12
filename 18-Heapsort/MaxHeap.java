@@ -5,12 +5,22 @@ public class MaxHeap{
     public int[] values;
     private int size;
     // [0,1,2,3,4,5,0,0,0]
+
     public MaxHeap(){
-	this(new int[10]);
+	values = new int[10];
+	values[0] = Integer.MAX_VALUE;
+	for (int i = 1; i < values.length; i++){
+	    values[i] = Integer.MIN_VALUE;
+	}
+	size = 0;
     }
-    
-    public void getRoot(){
+
+    public int getRoot(){
 	return values[1];
+    }
+
+    public String toString(){
+	return Arrays.toString(values);
     }
 
     public MaxHeap(int[] nums){
@@ -66,7 +76,8 @@ public class MaxHeap{
 	while (values[loc/2] < values[loc]){ //can swap up
 	    swap(loc/2, loc); //swap!
 	    loc = loc/2; //move loc to new location
-	}	
+	}
+	size++;
     }
 
     public int remove(){ 
