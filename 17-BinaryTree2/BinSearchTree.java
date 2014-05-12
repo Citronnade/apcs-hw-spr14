@@ -35,7 +35,7 @@ public class BinSearchTree{
 	    return false;
 	}
 	
-	if (temp.getLeft == null){
+	if (temp.getLeft() == null){
 	    if (temp.getRight != null){
 		prev.setNext(temp.getRight());
 	    }
@@ -43,7 +43,7 @@ public class BinSearchTree{
 		prev.setNext(temp.getLeft());
 	    }
 	}
-	else if (temp.getRight == null){
+	else if (temp.getRight() == null){
 	    prev.setNext(temp.getLeft());
 	}
 	else{
