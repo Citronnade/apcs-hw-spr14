@@ -1,4 +1,0 @@
-HashMap is a open hash (with linked list buckets) that automatically resizes when it runs low on spare space, according to the load factor.  Constant time for get and put assuming hash function is ok.  Not sorted at all, and order inside may change over time.
-TreeMap is a red-black tree sooo logarithmic time is guranteed for containsKey, get, put, remove.  Sorted by natural ordering.  TreeMap is a NavigableMa, so it can be navigated (find parents, children, etc).  Appears to use Map.Entry to hold nodes.
-
-
