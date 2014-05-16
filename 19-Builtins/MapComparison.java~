@@ -1,0 +1,15 @@
+import java.util.*;
+
+public class MapComparison{
+    public static void main(String[] args){
+	Random r = new Random(5);
+	HashMap hash = new HashMap(10000);
+	MessageDigest m = new MessageDigest("SHA-256");
+	TreeMap tree = new TreeMap();
+	int time = System.currentTimeMillis();
+	hash.
+    }
+
+
+
+}
